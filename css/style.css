@@ -210,6 +210,9 @@ img{
 #logo p{
   margin-left:0.8em;
 }
+#logo:hover{
+  cursor:pointer;
+}
 @media(max-width:400px){
   #logo{transform:scale(0.9); margin:0.3em;}
   #nav{transform:scale(0.9); margin:1em 0em;}
@@ -366,6 +369,7 @@ img.bgelement{
   transform:rotate(var(--rotate));
 }
 .arrow:hover{
+  cursor:pointer;
   --scaler:1.6 !important;
   filter: drop-shadow(0px 30px 4px rgba(0, 0, 0, 0.5));
 }
