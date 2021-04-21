@@ -291,6 +291,7 @@ img{
   width:100px;
   display:none;
 }
+.marker:hover{cursor:pointer;}
 .marker:hover .markerIcon{
   transform: scale(2.2,2.2);
   border-width:2px;
