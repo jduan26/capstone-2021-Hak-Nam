@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Hak Nam</title>
+    
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Stick&family=Syne+Mono&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/f22547db8e.js"></script>
+    
+    <!-- import the webpage's javascript file -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <script src="/gsap.min.js"></script>
+    <script src="/script.js" defer></script>
+    
+    
+    <script type="text/javascript" src="/jquery.minimap.js"></script>
+    <link rel="stylesheet" href="/jquery.minimap.css" />
+  </head>  
+  <body>
+    
+<!--     <div id="screen">
+      
+    </div> -->
+    
+    <div id="nav">
+<!--       <div id="about">
+        <p>i</p>
+      </div> -->
+<!--       <div id="animBtn">
+        <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+      </div> -->
+      <div id="sfx" class="inactive">
+        <i class="fa fa-volume-off" aria-hidden="true"></i>
+<!--         <i class="fa fa-volume-down" aria-hidden="true"></i> -->
+      </div>
+      <div id="mapBtn">
+        <p>MAP</p>
+      </div>
+    </div>
+    
+    <div id="sfxTip">
+      Sound is not supported on this browser.
+    </div>
+<!--     <div id="animTip">
+      Turn on Animations
+    </div> -->
+    
+    <div id="loading">
+      <img src="https://cdn.glitch.com/a930866b-18b5-4cbe-bbe9-352016a48366%2FLoadingSkylineColor.png?v=1618857339336">
+      <img id="cloudA" src="https://cdn.glitch.com/a930866b-18b5-4cbe-bbe9-352016a48366%2Fabout_cloud_01.png?v=1618855994098">
+      <div>
+        <h1>HAK<br>NAM</h1>
+        <p>Loading! This site is best viewed on desktop.</p>
+      </div>
+    </div>
+    
+    <div id="logo">
+      <h1>
+        HAK<br>NAM
+      </h1>
+      <p>
+        The Kowloon<br>Walled City
+      </p>
+    </div>
+    
+    <div id="mapPg">
+      <div id="abtPg">
+        <p>
+          More commonly referred to as ’The Walled City’, Hak Nam was a de jure Chinese enclave situated in Kowloon City, Hong Kong, 
+          known for its unparalleled population density and strangely organic labyrinthian structure, at its peak housing 33,000 people concentrated within 6.9 acres 
+          (about 4 FIFA soccer fields). Thanks to a lack of government regulations and proper city planning, 
+          buildings and staircases were packed so tightly together that sunlight almost never reached the ground floor. After being fully demolished in April 1994, 
+          it became a city only in urban legend, remembered by some for it's reputation as a lawless den of drugs and squalor, 
+          and also by others as a refuge, a home, or simply a place to buy soft drinks after school.
+        </p>
+        <p>
+          Hak Nam is a website that invites users to explore, navigate, and get lost in the community and cityscape of the Walled City—
+          a place that no longer exists. This website was designed by Jefferson Duan for his 2021 Capstone project at the Sam Fox School of 
+          Design & Visual Arts at Washington University in St. Louis. A special thank you to Jonathan Hanahan, Mr. Wai Lee, my studio mates, 
+          and the industry professionals from Google and Link By Air for providing me valuable insights and feedback throughout the development process.
+        </p>
+        <p>
+          Typefaces used on this site are Stick (Fontworks Inc.) and IBM Plex Mono (Mike Abbink, Bold Monday). All photographs used, as well as some paraphrased 
+          texts, were sourced from the <i>City of Darkness: Revisited</i> by Greg Girard and Ian Lambot.
+        </p>
+      </div>
+      <div id="about"><p>INFO</p></div>
+      
+      <div>
+        <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FMapFull2.png?v=1615764473867">
+        
+<!--         top:250px; left:408px; -->
+        <div id="rmrk1" class="marker" style=" top:10%; left:15%; ">
+          <div class="markerIcon">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FKWC-13.jpg?v=1615765200312" style="object-position:-50px -20px; display:block;">
+          </div>
+          <svg width="32" height="20">
+            <path d="M1 2 L16 18 L31 2" fill="transparent" stroke="white" stroke-width="4px"/>
+<!--             <path d="M2 4 L16 18 L30 4" fill="white" stroke="none"/> -->
+          </svg>
+        </div>
+<!--         top:455px; left:363px; -->
+        <div id="rmrk2" class="marker" style=" top:19.5%; left:13.4%; ">
+          <div class="markerIcon">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FEntranceway.png?v=1616593109030" style="object-position: -17px -65px;">
+          </div>
+          <svg width="32" height="20">
+            <path d="M1 2 L16 18 L31 2" fill="transparent" stroke="white" stroke-width="4px"/>
+          </svg>
+        </div>
+<!--       trash buckets -->  
+<!--         top:416px; left:645px; -->
+        <div id="rmrk3" class="marker" style=" top:19%; left:23%; ">
+          <div class="markerIcon">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FHallway03.png?v=1616424210118" style="object-position: -30px -57px;">
+          </div>
+          <svg width="32" height="20">
+            <path d="M1 2 L16 18 L31 2" fill="transparent" stroke="white" stroke-width="4px"/>
+          </svg>
+        </div>    
+  <!--       courtyard -->
+<!--         top:828px; left:1240px; -->
+        <div id="rmrk4" class="marker" style=" top:45%; left:50%; ">
+          <div class="markerIcon">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2Fedges_3kDrun.png?v=1615765577932" style="object-position:-50px -6px; width: 150px;">
+          </div>
+          <svg width="32" height="20">
+            <path d="M1 2 L16 18 L31 2" fill="transparent" stroke="white" stroke-width="4px"/>
+          </svg>
+        </div>
+<!--         top:512px; left:888px; -->
+        <div id="rmrk5" class="marker" style=" top:18.5%; left:35%; ">
+          <div class="markerIcon">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FHallway08.png?v=1616594715691" style="object-position: -10px -12px;">
+          </div>
+          <svg width="32" height="20">
+            <path d="M1 2 L16 18 L31 2" fill="transparent" stroke="white" stroke-width="4px"/>
+          </svg>
+        </div>
+<!--         top:835px; left:390px; -->
+        <div id="rmrk6" class="marker" style=" top:30%; left:15%; ">
+          <div class="markerIcon">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FMaze-01.jpg?v=1617040629544" style="object-position: -26px -40px;">
+          </div>
+          <svg width="32" height="20">
+            <path d="M1 2 L16 18 L31 2" fill="transparent" stroke="white" stroke-width="4px"/>
+          </svg>
+        </div>
+  <!--       water pipe -->   
+<!--         top:710px; left:900px; -->
+        <div id="rmrk7" class="marker" style=" top:32%; left:34%; ">
+          <div class="markerIcon">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FHallwayWater.png?v=1616424226126" style="object-position: -45px -30px;">
+          </div>
+          <svg width="32" height="20">
+            <path d="M1 2 L16 18 L31 2" fill="transparent" stroke="white" stroke-width="4px"/>
+          </svg>
+        </div>
+<!--         electricity -->
+        <div id="rmrk8" class="marker" style=" top:35%; left:27%; ">
+          <div class="markerIcon">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FHallwayElectricity.png?v=1617034446315" style="object-position: -20px 0px;">
+          </div>
+          <svg width="32" height="20">
+            <path d="M1 2 L16 18 L31 2" fill="transparent" stroke="white" stroke-width="4px"/>
+          </svg>
+        </div>
+  <!--       general store -->
+<!--         top:1033px; left:832px; -->
+        <div id="rmrk9" class="marker" style=" top:48%; left:32.5%; ">
+          <div class="markerIcon">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FTaiChangLungChun.png?v=1616424799868">
+          </div>
+          <svg width="32" height="20">
+            <path d="M1 2 L16 18 L31 2" fill="transparent" stroke="white" stroke-width="4px"/>
+          </svg>
+        </div>
+<!--         top:1086px; left:1156px; -->
+        <div id="rmrk10" class="marker" style=" top:50%; left:44%; ">
+          <div class="markerIcon">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2Fedges_fdVJp9.png?v=1615814816721" style="object-position:-12px;">
+          </div>
+          <svg width="32" height="20">
+            <path d="M1 2 L16 18 L31 2" fill="transparent" stroke="white" stroke-width="4px"/>
+          </svg>
+        </div>   
+        
+  <!--       temple -->
+<!--         top:522px; left:1540px; -->
+        <div id="rmrk11" class="marker" style=" top:22.5%; left:61%; ">
+          <div class="markerIcon">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FGIrard_KWC_temple01.jpg?v=1615814831914" style="object-position: -12px -4px;">
+          </div>
+          <svg width="32" height="20">
+            <path d="M1 2 L16 18 L31 2" fill="transparent" stroke="white" stroke-width="4px"/>
+          </svg>
+        </div>
+<!--         staircase -->
+        <div id="rmrk12" class="marker" style=" top:23%; left:42%; ">
+          <div class="markerIcon">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FHallway04.png?v=1616999952740" style="object-position: -18px -10px">
+          </div>
+          <svg width="32" height="20">
+            <path d="M1 2 L16 18 L31 2" fill="transparent" stroke="white" stroke-width="4px"/>
+          </svg>
+        </div>
+<!--         apartment shrine - dead end -->
+        <div id="rmrk13" class="marker" style=" top:18%; left:50%; ">
+          <div class="markerIcon">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FShrine02.png?v=1616999985052" style="object-position: 0px -15px">
+          </div>
+          <svg width="32" height="20">
+            <path d="M1 2 L16 18 L31 2" fill="transparent" stroke="white" stroke-width="4px"/>
+          </svg>
+        </div>
+<!--         kai fong -->
+        <div id="rmrk14" class="marker" style=" top:24.5%; left:52%; ">
+          <div class="markerIcon">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FHallwayStaircase.png?v=1617000903472" style="object-position: -14px -50px">
+          </div>
+          <svg width="32" height="20">
+            <path d="M1 2 L16 18 L31 2" fill="transparent" stroke="white" stroke-width="4px"/>
+          </svg>
+        </div>
+<!--         upper floor area -->
+        <div id="rmrk15" class="marker" style=" top:27%; left:65%; ">
+          <div class="markerIcon">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FHallway09UpperFloor.png?v=1617514726476">
+          </div>
+          <svg width="32" height="20">
+            <path d="M1 2 L16 18 L31 2" fill="transparent" stroke="white" stroke-width="4px"/>
+          </svg>
+        </div>
+        
+        <div id="rmrk16" class="marker" style=" top:33%; left:60%; ">
+          <div class="markerIcon">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FHallway07.png?v=1617746481573" style="object-position:-35px -52px">
+          </div>
+          <svg width="32" height="20">
+            <path d="M1 2 L16 18 L31 2" fill="transparent" stroke="white" stroke-width="4px"/>
+          </svg>
+        </div>
+<!--         rooftop -->
+        <div id="rmrk17" class="marker" style=" top:29%; left:75%; ">
+          <div class="markerIcon">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FKWC_rooftop02.jpg?v=1617521289853" style="object-position:-23px -5px">
+          </div>
+          <svg width="32" height="20">
+            <path d="M1 2 L16 18 L31 2" fill="transparent" stroke="white" stroke-width="4px"/>
+          </svg>
+        </div>
+        
+        <div id="rmrk18" class="marker" style=" top:44%; left:59%; ">
+          <div class="markerIcon">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FHallway06.png?v=1616997692891" style="object-position:-4px -62px">
+          </div>
+          <svg width="32" height="20">
+            <path d="M1 2 L16 18 L31 2" fill="transparent" stroke="white" stroke-width="4px"/>
+          </svg>
+        </div>
+<!--         postman -->
+        <div id="rmrk19" class="marker" style=" top:53%; left:56%; ">
+          <div class="markerIcon">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FKWC_postmanb.jpg?v=1617656301572">
+          </div>
+          <svg width="32" height="20">
+            <path d="M1 2 L16 18 L31 2" fill="transparent" stroke="white" stroke-width="4px"/>
+          </svg>
+        </div>
+        
+        <div id="rmrk20" class="marker" style=" top:37%; left:20%; ">
+          <div class="markerIcon">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FNoodleFactory.png?v=1618790027517" style="object-position:-33px -36px">
+          </div>
+          <svg width="32" height="20">
+            <path d="M1 2 L16 18 L31 2" fill="transparent" stroke="white" stroke-width="4px"/>
+          </svg>
+        </div>
+        
+        <div id="rmrk21" class="marker" style=" top:40%; left:16%; ">
+          <div class="markerIcon">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FHallway12.png?v=1618787255830" style="object-position:-26px -32px">
+          </div>
+          <svg width="32" height="20">
+            <path d="M1 2 L16 18 L31 2" fill="transparent" stroke="white" stroke-width="4px"/>
+          </svg>
+        </div>
+        
+        <div id="rmrk22" class="marker" style=" top:58%; left:66%; ">
+          <div class="markerIcon">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FHallway10.png?v=1617522351271" style="object-position:-28px -37px">
+          </div>
+          <svg width="32" height="20">
+            <path d="M1 2 L16 18 L31 2" fill="transparent" stroke="white" stroke-width="4px"/>
+          </svg>
+        </div>
+        
+        <div id="rmrk23" class="marker" style=" top:60%; left:57%; ">
+          <div class="markerIcon">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FMaze-07.jpg?v=1617522366768" style="object-position:-2px -27px">
+          </div>
+          <svg width="32" height="20">
+            <path d="M1 2 L16 18 L31 2" fill="transparent" stroke="white" stroke-width="4px"/>
+          </svg>
+        </div>
+        
+        <div id="rmrk24" class="marker" style=" top:63%; left:52%; ">
+          <div class="markerIcon">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FClinic.png?v=1617522416211" style="object-position:-37px -57px">
+          </div>
+          <svg width="32" height="20">
+            <path d="M1 2 L16 18 L31 2" fill="transparent" stroke="white" stroke-width="4px"/>
+          </svg>
+        </div>
+        
+        <div id="rmrk26" class="marker" style=" top:44%; left:73%; ">
+          <div class="markerIcon">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FHallway05.png?v=1617579936724" style="object-position:-20px -57px">
+          </div>
+          <svg width="32" height="20">
+            <path d="M1 2 L16 18 L31 2" fill="transparent" stroke="white" stroke-width="4px"/>
+          </svg>
+        </div>
+        
+        <div id="rmrk25" class="marker" style=" top:56%; left:72.5%; ">
+          <div class="markerIcon">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2Fgirard_kowloon006.jpg?v=1615814829136" style="object-position:-25px">
+          </div>
+          <svg width="32" height="20">
+            <path d="M1 2 L16 18 L31 2" fill="transparent" stroke="white" stroke-width="4px"/>
+          </svg>
+        </div>
+<!--         Mailboxes -->
+        <div id="rmrk27" class="marker" style=" top:20%; left:70%; ">
+          <div class="markerIcon">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FMailbox02.png?v=1617687122172" style="object-position:0px -5px">
+          </div>
+          <svg width="32" height="20">
+            <path d="M1 2 L16 18 L31 2" fill="transparent" stroke="white" stroke-width="4px"/>
+          </svg>
+        </div>
+<!--         Fuk Tak -->
+        <div id="rmrk28" class="marker" style=" top:8%; left:72%; ">
+          <div class="markerIcon">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FFukTakTemple2.png?v=1617733885100" style="object-position:-28px -73px">
+          </div>
+          <svg width="32" height="20">
+            <path d="M1 2 L16 18 L31 2" fill="transparent" stroke="white" stroke-width="4px"/>
+          </svg>
+        </div>
+<!--         ruler shop -->
+        <div id="rmrk29" class="marker" style=" top:46%; left:19%; ">
+          <div class="markerIcon">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FRulerShop2.jpg?v=1617496727319" style="object-position:-43px -21px">
+          </div>
+          <svg width="32" height="20">
+            <path d="M1 2 L16 18 L31 2" fill="transparent" stroke="white" stroke-width="4px"/>
+          </svg>
+        </div>
+        
+        <div id="rmrk30" class="marker" style=" top:55%; left:22%; ">
+          <div class="markerIcon">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FDeadEnd%3F.png?v=1617579466346" style="object-position:-24px -17px">
+          </div>
+          <svg width="32" height="20">
+            <path d="M1 2 L16 18 L31 2" fill="transparent" stroke="white" stroke-width="4px"/>
+          </svg>
+        </div>
+
+        
+      </div>
+      
+    </div>
+    
+    <div id="mobile" class="modal" style="padding: 100px 30px;">
+      <p>
+        This website is designed to work best on a desktop fullscreen view, and it is recommended that it be experienced as such. 
+        <br><br>While it is still operable on mobile and tablet views, certain elements may be more difficult to access. 
+        Close this popup to proceed anyways.
+      </p>
+    </div>
+    
+    <div id="contentPg">
+<!--       city entrance -->
+      <div id="rm1" class="page"> 
+        <div>
+          <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FKWC-13.jpg?v=1615765200312">
+          <div class="rmelement arrow" style="
+                                              top:90%; left:50%; --scaler:1;
+                                              -webkit-transform: perspective(400px) rotateX(60deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:-110deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div id="beginScroll" class="rmelement arrow" style="
+                                              position:fixed; bottom:10%; left:47%; --scaler:1;
+                                              -webkit-transform: perspective(400px) rotateX(0deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:0deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          
+          <div class="rmelement text">
+            <p>
+              Unrestricted by building laws and architectural convention, the 'Walled City' consists of buildings 10-14 stories 
+              tall haphazardly packed together. The only reason it stops there was because building any higher would cause problems 
+              for landing aircraft flying overhead.
+            </p>
+          </div>
+          
+        </div>
+        
+        <div id="intro" class="modal">
+          <h1>It's the 1970s</h1>
+          <p>
+            You’re visiting Hong Kong, and you happen upon the cluster of tiny apartments and caged balconies 
+            known as Hak Nam, or the Walled City. You’ve heard of the place’s crime and squalor, 
+            and also of its fishball noodle soup—apparently the best in the country. You decide to 
+            talk a walk through its subterranean corridors.
+          </p>
+        </div>
+      </div>
+      
+<!--       <div id="rm1a" class="page">
+        <div>
+          <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2F131211_girard6.jpg?v=1618779909394">
+          
+        </div>
+      </div> -->
+
+      <div id="rm2" class="page">
+        <div>
+          <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FEntranceway.png?v=1616593109030">
+          <div class="rmelement arrow" style="
+                                              top:69%; left:40%; --scaler:0.9;
+                                              -webkit-transform: perspective(400px) rotateX(60deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:-172deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow" style="
+                                              top:78%; left:60%; --scaler:1;
+                                              -webkit-transform: perspective(400px) rotateX(60deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:-110deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow back" style="
+                                              top:88%; left:47%; --scaler:1.5;
+                                              -webkit-transform: perspective(400px) rotateX(60deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:0deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          
+          <div class="rmelement text">
+            <p>
+              There are no 'real entrances' into the Walled City, just narrow openings between shops that open up into the maze. 
+              This one takes you into Lo Yan Street from Tung Tau Tsuen Road, and descends four storeys below ground level. It's 
+              also one of the few streets with enough space to allow natural light to filter through.
+            </p>
+          </div>
+          <div class="rmelement text">
+            <p>
+              This tall sign advertises the presence of the Kowloon Walled City Landlord's Association. 
+              Perfect if you're just starting out and looking for a cheap place to live. 
+            </p>
+          </div>
+        </div>
+      </div>
+<!--       trash -->
+      <div id="rm3" class="page">
+        <div>
+          <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FHallway03.png?v=1616424210118">
+          <div class="rmelement arrow" style="
+                                              top:61%; left:60%; --scaler:1;
+                                              -webkit-transform: perspective(400px) rotateX(68deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:-162deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow back" style="
+                                              top:79%; left:40%; --scaler:1.5;
+                                              -webkit-transform: perspective(400px) rotateX(60deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:20deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          
+          <div class="rmelement text">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FTrashRoom.png?v=1617598678071">
+            <p>
+              The Walled City is not subject to government control or services, but one thing that is provided by 
+              the Urban Services Department is refuse collection. As such the streets remains relatively clean, 
+              the rat population remains relatively controlled, and most importantly the fire risk stays relatively low.
+            </p>
+          </div>
+          <div class="rmelement text">
+            <p>
+              These orange USD buckets can be found all over, and numerous refuse collection points are routinely 
+              patrolled by the 10 sweepers in the city. Not all residents are great at cleaning up after themselves though.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+<!--       courtyard -->
+      <div id="rm4" class="page">
+        <div>
+          <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2Fedges_3kDrun.png?v=1615765577932">
+          <div class="rmelement arrow" style="
+                                              top:75%; left:3%; --scaler:1;
+                                              -webkit-transform: perspective(400px) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:75deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow" style="
+                                              top:75%; right:3%; --scaler:1;
+                                              -webkit-transform: perspective(400px) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:-75deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          
+          <div class="rmelement text">
+            <p>
+              Just outside the yamen's entrance sits two cannons from back when it was built as a military fort. An inscription on them reads 
+              that they were cast in 1802.
+            </p>
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FBN-CC581_KWC_la_G_20140327051646.jpg?v=1617623228236">
+          </div>
+          <div class="rmelement text">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2Fedges_M27Gwa.png?v=1617623101538">
+            <p>
+              Within the courtyard of the Walled City is the yamen, an old military fort built in 1845 to respond to the arrival of the British. 
+              As essentially the only place in the city that enjoyed both fresh air and natural light, the courtyard is a popular meeting place 
+              on sunny days, for residents to sit and chat, prepare the evening's meals, or air the bedding.
+            </p>
+          </div>
+          <div class="rmelement text">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FOld-People-01.jpg?v=1617623132045">
+            <p>
+              In 1971 the yamen compound was taken over by the CNEC Living World Church, keeping it safe from redevelopment. Reverend Isaac Liu 
+              converted the main building into the Old People's Centre, which acts as both an informal welfare service as well as a place for companionship, television,  
+              and afternoon tea and biscuits.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div id="rm5" class="page">
+        <div>
+          <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FHallway08.png?v=1616594715691">
+          <div class="rmelement arrow" style="
+                                              top:74%; left:42%; --scaler:1;
+                                              -webkit-transform: perspective(400px) rotateX(60deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:-198deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow back" style="
+                                              top:90%; left:45%; --scaler:1.5;
+                                              -webkit-transform: perspective(400px) rotateX(60deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:-16deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow" style="
+                                              top:87%; left:24%; --scaler:1.2;
+                                              -webkit-transform: perspective(400px) rotateX(60deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:70deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          
+          <div class="rmelement text">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FCafeRegister.png?v=1617750164801">
+            <p>
+              The cashier's desk at Ng Kam Mui's Chung Fat Cafe. Due to its proximity to the edge of the City on Tung Tau Tsuen Road, the cafe is a popular haunt 
+              for taxi drivers. The menu offers a variety of Chinese and Western drinks as well as affordable meals. Typical fare includes yuan-yang tea 
+              (a mix of coffee and tea), butter toast with drizzled condensed milk, and instant noodles with a fried egg and luncheon meat among other hybrid options.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div id="rm6" class="page">
+        <div>
+          <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FMaze-01.jpg?v=1617040629544">
+          <div class="rmelement arrow" style="
+                                              top:48%; left:59%; --scaler:1;
+                                              -webkit-transform: perspective(400px) rotateX(65deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:-176deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow back" style="
+                                              top:81%; left:55%; --scaler:1.5;
+                                              -webkit-transform: perspective(400px) rotateX(60deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:-16deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          
+          <div class="rmelement text">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FBakery.png?v=1617630105462">
+            <p>
+              Near the entrance is Jetly Chau Sau Yee's Chiu Chow cake shop. His rice cakes are made from ingredients from all over the world, 
+              and are either sold to retail shops or temple ceremonies. Due to their location, the shop has become a regular stopping point for foreign tour 
+              groups as of late. The English signs introduce his wares to non-Chinese speaking customers. 
+            </p>
+          </div>
+          <div class="rmelement text">
+            <p>
+              Further down Sai Shing (West City) Road is Lee Yu Chun's candy factory. The business started in 1964, and has been run by four generations of 
+              family ever since. A number of female workers are also employed as well. Despite there being no regulations for food safety in the City, 
+              the business takes pride in the efforts made to ensure their own product quality.
+            </p>
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FCandymaker-01.jpg?v=1617630390549">
+          </div>
+        </div>
+      </div>
+      
+<!--       water -->
+      <div id="rm7" class="page">
+        <div>
+          <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FHallwayWater.png?v=1616424226126">
+          <div class="rmelement arrow" style="
+                                              top:62%; left:14%; --scaler:1;
+                                              -webkit-transform: perspective(400px) rotateX(60deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:-198deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow" style="
+                                              top:66%; left:38%; --scaler:1;
+                                              -webkit-transform: perspective(400px) rotateX(60deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:-133deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow back" style="
+                                              top:89%; left:38%; --scaler:1.5;
+                                              -webkit-transform: perspective(400px) rotateX(60deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:-22deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          
+          <div class="rmelement text">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FTaiChangWater.png?v=1617603304108">
+            <p>
+              The Tai Chang Street stand-pipe is one of the eight public stand-pipes that provides safe drinking water in the city. 
+              Many people frequent these spots for all kinds of needs; this man is using the water to both wash his hair and 
+              also thaw the frozen eels he'll bring to the fishball factory later.
+            </p>
+          </div>
+          <div class="rmelement text">
+            <p>
+              Numerous hosepipes hang next to the stand-pipe. Occasionally a worker might come down to attach their business's 
+              hosepipe to refill a tank back in the factory. 
+            </p>
+          </div>
+        </div>
+      </div>
+      
+<!--       electricity -->
+      <div id="rm8" class="page">
+        <div>
+          <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FHallwayElectricity.png?v=1617034446315">
+          <div class="rmelement arrow" style="
+                                              top:63%; left:22%; --scaler:0.9;
+                                              -webkit-transform: perspective(400px) rotateX(60deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:-147deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow back" style="
+                                              top:88%; left:35%; --scaler:1.5;
+                                              -webkit-transform: perspective(400px) rotateX(60deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:-22deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          
+          <div class="rmelement text">
+            <p>
+              The masses of tangled wires you see on the ceilings eventually converge to deceptively organized groups of electric 
+              meters like these ones. It was only recently that China Electric decided to supply electricity to the city–before that 
+              almost all the power was privately and illegally tapped from nearby mains.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+<!--       general store -->
+      <div id="rm9" class="page">
+        <div>
+          <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FTaiChangLungChun.png?v=1616424799868">
+          <div class="rmelement arrow" style="
+                                              top:68%; left:72%; --scaler:0.8;
+                                              -webkit-transform: perspective(400px) rotateX(60deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:-172deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow back" style="
+                                              top:87%; left:71%; --scaler:1.5;
+                                              -webkit-transform: perspective(400px) rotateX(60deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:2deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow" style="
+                                              top:48%; left:31%; --scaler:1.2;
+                                              -webkit-transform: perspective(400px) rotateY(-25deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:95deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement text">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FHo-Chi-Kam.jpg?v=1617609252299">
+            <p>
+              Down Tai Change street is Ho Chi Kam's barber's shop. Almost all of his customers are local residents, and the combination of low prices 
+              and being situated near the Tai Chang stand-pipe sometimes meant the occasional long queue for service.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div id="rm9a" class="page">
+        <div>
+          <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FGirard_KWC_Shop_002.jpg?v=1618798312741">
+          <div class="rmelement arrow" style="
+                                              top:60%; left:19%; --scaler:1.2;
+                                              -webkit-transform: perspective(400px) rotateY(50deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:90deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          
+          <div class="rmelement text">
+            <p>
+              Located right here at the corner of Tai Chang Street and Lung Chun Back Road is Lee Pui Yuen's general store, one of the 
+              biggest in the city. A steady stream of people come by 6 AM to midnight, seven days a week, to purchase necessities 
+              or just chat. Here you can buy rice, kerosene, tinned fish, condensed milk, toilet paper, cigarettes, soft drinks, ice cream, and even Tic-Tacs.
+            </p>
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FLee-Pui-Yuen.jpg?v=1617609319487">
+          </div>
+          <div class="rmelement text">
+            <p>
+              Behind the single partition is a small bedroom where Lee sleeps with his wife and son. Since they live in the store, the place is essentially 
+              open for the full 16-hour day, or at least until Lee turns off the television.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div id="rm10" class="page">
+        <div>
+          <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2Fedges_fdVJp9.png?v=1615814816721">
+          <div class="rmelement arrow" style="
+                                              top:48%; left:45%; --scaler:0.8;
+                                              -webkit-transform: perspective(400px) rotateX(40deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:-186deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow" style="
+                                              top:54%; left:50%; --scaler:0.9;
+                                              -webkit-transform: perspective(400px) rotateX(60deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:-176deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow back" style="
+                                              top:85%; left:50%; --scaler:1.5;
+                                              -webkit-transform: perspective(400px) rotateX(60deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:-4deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          
+          <div class="rmelement text">
+            <p>
+              On the right here is the entrance to the kindergarten run by the Salvation Army. It is rather well-attended, and they also 
+              help with family care for parents who are too busy with work to watch their children. Occassionally the children even get to go 
+              on field trips outside the city.
+            </p>
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2Fedges_pfjPGW.png?v=1617612573520">
+          </div>
+          <div class="rmelement text">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FFishballs-02.jpg?v=1617612576878">
+            <p>
+              Behind the shutters on the left is Lam Leung Po's minced fish factory, convieniently located not too far from the Tai Chang stand-pipe. 
+              Despite not having hygiene inspections, the place is one of the cleaner and better equipped food processing establishments. 
+              In the back female part-time workers prepare minced fish dumplings.
+            </p>
+          </div>
+          <div class="rmelement text">
+            <p>
+              Despite being one of the only alleyways that runs east-west across the city, major thoroughfares like Lung Chun Back Road here 
+              are hardly ever crowded and usually quiet for most of the day.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--       temple -->
+      <div id="rm11" class="page">
+        <div>
+          <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FGIrard_KWC_temple01.jpg?v=1615814831914">
+          <div class="rmelement arrow" style="
+                                              top:29%; left:8%; --scaler:1;
+                                              -webkit-transform: perspective(400px) rotateX(40deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:-184deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow" style="
+                                              top:30%; left:18%; --scaler:1;
+                                              -webkit-transform: perspective(400px) rotateX(120deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:-185deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          
+          <div class="rmelement text">
+            <p>
+              One of the few buildings to remain untouched in the Walled City's constant growth, Tin Hau Temple is a temple dedicated 
+              to the patron goddess of fisherman. While it isn't near the sea like most Tin Hau Temples, the large population of Chiu Chow 
+              immigrants (who were once fishermen) living in the city find it to be an appropriate alternative. The temple is guarded by an aggressive dog 
+              and is covered by a mesh grill overhead to prevent trash from dirtying the tiled roof. The grill is cleared once a year.
+            </p>
+          </div>
+        </div>
+      </div>
+<!--     staircase -->
+      <div id="rm12" class="page">
+        <div>
+          <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FHallway04.png?v=1616999952740">
+          <div class="rmelement arrow" style="
+                                              top:24%; left:17%; --scaler:1;
+                                              -webkit-transform: perspective(400px) rotateY(-10deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:-111deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow back" style="
+                                              top:89%; left:76%; --scaler:1.5;
+                                              -webkit-transform: perspective(400px) rotateX(60deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:191deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          
+          <div class="rmelement text">
+            <p>
+              Since there are only two lifts in the entire city, access to the upper floors (of the 10-14 storey apartment blocks) is almost 
+              always via stairs. That being said, the sheer amount of stairs and corridors that link buildings together does make it a little easier 
+              to get around. And even though the alleyways are often littered with rubbish, the stairways always remain comparatively clear.
+            </p>
+          </div>
+          <div class="rmelement text">
+            <p>
+              A single staircase can link two, three, or even four buildngs. To maximize space developers built stairs directly into the gaps 
+              between buildings, or even build buildings right next to stairs that already exist. Spaces between buildings are nonexistent on the lower floors–
+              the only evidence left of them being windows that now overlook more wall.
+            </p>
+          </div>
+        </div>
+      </div>
+<!--       apartment shrine -->
+      <div id="rm13" class="page">
+        <div>
+          <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FShrine02.png?v=1616999985052">
+          <div class="rmelement arrow back" style="
+                                              top:90%; left:38%; --scaler:1.5;
+                                              -webkit-transform: perspective(400px) rotateX(60deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:-16deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          
+          <div class="rmelement text">
+<!--             <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FShrine01.png?v=1617618317552"> -->
+            <p>
+              As is the case all over Hong Kong, a lot of the apartments in the Walled City have small family shrines, regurarly blessed with fresh offerings of 
+              food and incense to bring good fortune and steer away evil spirits. Apartments in the buildings along Tung Tau Tsuen Road are considered
+              the most desirable and undoubtedly the best in the City. They are relatively spacious, have more access to natural light, and are directly 
+              accessible from the main road outside.
+            </p>
+          </div>
+        </div>
+      </div>
+<!--       kai fong stairs -->
+      <div id="rm14" class="page">
+        <div>
+          <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FHallwayStaircase.png?v=1617000903472">
+          <div class="rmelement arrow" style="
+                                              top:58%; left:33%; --scaler:1;
+                                              -webkit-transform: perspective(400px) rotateX(50deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:153deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow" style="
+                                              top:72%; left:49%; --scaler:1.2;
+                                              -webkit-transform: perspective(400px) rotateX(50deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:-32deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow" style="
+                                              top:14%; left:69%; --scaler:1.2;
+                                              -webkit-transform: perspective(400px) rotateY(-30deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:95deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+<!--           <div class="rmelement arrow back" style="
+                                              top:87%; left:30%; --scaler:1.5;
+                                              -webkit-transform: perspective(400px) rotateX(50deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:-36deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div> -->
+<!--           <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FHallwayStaircaseOverlay.png?v=1617519281811"> -->
+         
+          <div class="rmelement text">
+            <p>
+              This stairway leads to apartments that overlook Tung Tau Tsuen Road, as well as to the Kai Fong Association office. The office is open 
+              every weekday during normal working hours, with two full-time secretaries ready to help with residents' problems and concerns. The Kai Fong 
+              Association often acts as representatives of the Walled City, especially when negotiating with the government.
+            </p>
+          </div>
+        </div>
+      </div>
+<!--       upper floor area -->
+      <div id="rm15" class="page">
+        <div>
+          <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FHallway09UpperFloor.png?v=1617514726476">
+          <div class="rmelement arrow" style="
+                                              top:60%; left:86%; --scaler:1;
+                                              -webkit-transform: perspective(400px) rotateX(50deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:184deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow" style="
+                                              top:66%; left:72%; --scaler:0.9;
+                                              -webkit-transform: perspective(400px) rotateX(65deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:214deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow" style="
+                                              top:67%; left:64%; --scaler:1;
+                                              -webkit-transform: perspective(400px) rotateX(65deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:130deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow back" style="
+                                              top:89%; left:62%; --scaler:1.5;
+                                              -webkit-transform: perspective(400px) rotateX(60deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:34deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          
+          <div class="rmelement text">
+            <p>
+              A small convience store situated in a slightly more spacious corridor that joins multiple buildings. It's very convenient for 
+              those who live on the higher floors, as they don't have to make the trek all the way down to buy the goods they need. It also makes 
+              for good communal meeting places. The signs above point to other establishments nearby–in this case medicine shops and physician clinics.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div id="rm16" class="page">
+        <div>
+          <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FHallway07.png?v=1617746481573">
+          <div class="rmelement arrow" style="
+                                              top:67%; left:61%; --scaler:0.9;
+                                              -webkit-transform: perspective(400px) rotateX(45deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:187deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow" style="
+                                              top:74%; left:53%; --scaler:1;
+                                              -webkit-transform: perspective(400px) rotateX(60deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:126deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow back" style="
+                                              top:86%; left:54%; --scaler:1.5;
+                                              -webkit-transform: perspective(400px) rotateX(50deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:5deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          
+          <div class="rmelement text">
+            <p>
+              All over the city Chinese text is painted on the walls, usually as a way to mark areas and help people find their way around the maze. 
+              Some of the text here advertises a TV repair service. The topmost text reads as directions to a building on the second floor with address A.
+            </p>
+          </div>
+        </div>
+      </div> 
+<!--       rooftop -->
+      <div id="rm17" class="page rooftop">
+        <div>
+          <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FKWC_rooftop02.jpg?v=1617521289853">
+          <div class="rmelement arrow back" style="
+                                              top:85%; left:66%; --scaler:1.5;
+                                              -webkit-transform: perspective(400px) rotateX(50deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:-26deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow" style="
+                                              top:55%; left:90%; --scaler:1;
+                                              -webkit-transform: perspective(0px) rotateX(0deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:-90deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow" style="
+                                              top:55%; left:5%; --scaler:1;
+                                              -webkit-transform: perspective(0px) rotateX(0deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:90deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          
+          <div class="rmelement text">
+            <p>
+              The rooftop is a rather popular place to gather, expecially in the evening, being a quiet oasis of fresh air 
+              and natural light. The discarded fittings and furniture make for exciting playgrounds for children, 
+              and the open space is also good for quietly finishing homework.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div id="rm17a" class="page rooftop">
+        <div>
+          <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FRooftopPolice.png?v=1617695747798">
+          <div class="rmelement arrow" style="
+                                              top:55%; left:90%; --scaler:1;
+                                              -webkit-transform: perspective(0px) rotateX(0deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:-90deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow" style="
+                                              top:55%; left:5%; --scaler:1;
+                                              -webkit-transform: perspective(0px) rotateX(0deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:90deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          
+          <div class="rmelement text">
+            <p>
+              A two man police-patrol makes their way across the rooftops of the City. Contrary to popular belief, the police have been 
+              patrolling the City almost since the very beginning, and the place is no longer the 'den of iniquity' that outsiders believe it to be. 
+              Sometimes they might run into postmen Mr. Lui or Mr. Lam trying to climb through rooftop windows and mistake them for burgulars. 
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="rm17b" class="page rooftop">
+        <div>
+          <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2Fgirard_kowloon005.jpg?v=1615814826103">
+          <div class="rmelement arrow" style="
+                                              top:55%; left:90%; --scaler:1;
+                                              -webkit-transform: perspective(0px) rotateX(0deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:-90deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow" style="
+                                              top:55%; left:5%; --scaler:1;
+                                              -webkit-transform: perspective(0px) rotateX(0deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:90deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          
+          <div class="rmelement text">
+            <p>
+              The rooftop ambience is frequently interrupted by screaming jet engines as airplanes make their final turn in the descent 
+              onto the runway of Kai Tak Airport. This proximity to the flight path led to the only mandatory building restriction in the Walled City: 
+              a maximum limit of 150 feet (just under 15 storeys).
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="rm17c" class="page rooftop">
+        <div>
+          <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FRooftop.png?v=1617692744579">
+          <div class="rmelement arrow" style="
+                                              top:55%; left:90%; --scaler:1;
+                                              -webkit-transform: perspective(0px) rotateX(0deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:-90deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow" style="
+                                              top:55%; left:5%; --scaler:1;
+                                              -webkit-transform: perspective(0px) rotateX(0deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:90deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          
+          <div class="rmelement text">
+            <p>
+              Chan Kwan Leung breeds hundreds of pigeons on the rooftop of his apartment, for both individual sale but more importantly for 
+              pigeon racing (the only real sport in the Walled City, really). The quiet moments where there is a lull in incoming airplanes is 
+              ideal for exercising pigeons. If you ever find yourself lost on the roof he is happy to show you the way around.
+            </p>
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FRooftopPigeon.png?v=1617736422556">
+          </div>
+        </div>
+      </div>
+      
+      <div id="rm18" class="page">
+        <div>
+          <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FHallway06.png?v=1616997692891">
+          <div class="rmelement arrow" style="
+                                              top:60%; left:69%; --scaler:1;
+                                              -webkit-transform: perspective(400px) rotateX(60deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:185deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow back" style="
+                                              top:80%; left:57%; --scaler:1.5;
+                                              -webkit-transform: perspective(400px) rotateX(50deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:12deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          
+          <div class="rmelement text">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FCookedMeat.png?v=1617749117867">
+            <p>
+              The huge cylindrical ovens in Yim Kwok Yuen's cooked meat factory on Lo Yan Street raise the already stifiling summer temperatures by 
+              several degrees. The factory prepares roast chicken, goose, and pork, and Yim himself takes the goods to Wong Tai Sin market to sell, 
+              albeit as an unlicensed hawker. While the conditions are rather unsanitary, Yim states that things were much worse where he came from.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+<!--       postman -->
+      <div id="rm19" class="page">
+        <div>
+          <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FKWC_postmanb.jpg?v=1617656301572">
+          <div class="rmelement arrow" style="
+                                              top:50%; left:62%; --scaler:0.9;
+                                              -webkit-transform: perspective(400px) rotateX(55deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:195deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow back" style="
+                                              top:79%; left:43%; --scaler:1.2;
+                                              -webkit-transform: perspective(400px) rotateX(50deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:110deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow back" style="
+                                              top:84%; left:72%; --scaler:1.2;
+                                              -webkit-transform: perspective(400px) rotateX(45deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:-89deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow back" style="
+                                              top:88%; left:55%; --scaler:1.4;
+                                              -webkit-transform: perspective(400px) rotateX(45deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:14deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          
+          <div class="rmelement text">
+            <p>
+              Postman Lui Man Sang emerges from a staircase to one of the many alleys. He and his colleage Lam Po Chun are the only two postmen in 
+              the City—no one knows the alleyways better than them. Their daily route always starts on Lo Yan Street, and then they make their way up 
+              and down the City, hopping the rooftops to cross between buildings.
+            </p>
+          </div>
+        </div>
+      </div>
+<!--       Noodle Factory -->
+      <div id="rm20" class="page">
+        <div>
+          <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FNoodleFactory.png?v=1618790027517">
+          <div class="rmelement arrow back" style="
+                                              top:83%; left:53%; --scaler:1.5;
+                                              -webkit-transform: perspective(400px) rotateX(50deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:-15deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          
+          <div class="rmelement text">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FNoodleMaker.png?v=1618794419462">
+            <p>
+              A peek inside Chan Wai Shui's noodle factory on Lo Yan street. Almost everything in this room is covered with a thin layer of flour dust. 
+              Every day he and his coworkers Mr Shum and Kwan Tsin On make over 100 pounds of noodle and Won Tun pastry every day, and today is no different. 
+              Finished noodles have to be delivered the day of, as there isn't an easy way to reliably store them.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div id="rm21" class="page">
+        <div>
+          <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FHallway12.png?v=1618787255830">
+          <div class="rmelement arrow" style="
+                                              top:60%; left:34%; --scaler:1;
+                                              -webkit-transform: perspective(400px) rotateY(28deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:90deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow" style="
+                                              top:64%; left:61%; --scaler:1;
+                                              -webkit-transform: perspective(400px) rotateX(50deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:-182deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow back" style="
+                                              top:90%; left:45%; --scaler:1.5;
+                                              -webkit-transform: perspective(400px) rotateX(55deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:23deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          
+          <div class="rmelement text">
+            <p>
+              Despite the large amount of people packed in such a small area of space, the alleyways are hardly ever crowded and usually quiet for most of the day. 
+              They aren't any dryer or cleaner, but at least they're easy to walk through. 
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div id="rm22" class="page">
+        <div>
+          <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FHallway10.png?v=1617522351271">
+          <div class="rmelement arrow" style="
+                                              top:58%; left:48%; --scaler:1;
+                                              -webkit-transform: perspective(400px) rotateX(60deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:175deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow back" style="
+                                              top:82%; left:53%; --scaler:1.5;
+                                              -webkit-transform: perspective(400px) rotateX(50deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:-10deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          
+          <div class="rmelement text">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FFamily-01.jpg?v=1617742722207">
+            <p>
+              This is Chung Lo Yin's apartment on the fourth floor of 82 Lung Chun Road, which has the rare privilege of overlooking the 
+              park outside the City. She is reguarly joined for dinner by at least one or two of her 10 children. 
+              Where she lives, the streets are relatively wide and clean, and she knows her neighbors well enough to leave the door unlocked.
+            </p>
+          </div>
+          <div class="rmelement text">
+            The text painted on the wall here advertises a tutoring service for schoolchildren.
+          </div>
+        </div>
+      </div>
+      
+      <div id="rm23" class="page">
+        <div>
+          <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FMaze-07.jpg?v=1617522366768">
+          <div class="rmelement arrow" style="
+                                              top:62.5%; left:72%; --scaler:1.2;
+                                              -webkit-transform: perspective(400px) rotateX(40deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:192deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow" style="
+                                              top:80%; left:37%; --scaler:1.2;
+                                              -webkit-transform: perspective(400px) rotateX(50deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:142deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow back" style="
+                                              top:90%; left:50%; --scaler:1.5;
+                                              -webkit-transform: perspective(400px) rotateX(50deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:30deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          
+          <div class="rmelement text">
+            <p>
+              All over the city Chinese text is painted on the walls, advertising nearby restaurants or businesses or simply providing navigation 
+              directions. The large text and arrows here read "Luen Ying House", and right below it advertises for new buildings for sale. 
+              The small text near the bottom lists a phone number: 838924.
+            </p>
+          </div>
+        </div>
+      </div>
+<!--       clinic -->
+      <div id="rm24" class="page">
+        <div>
+          <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FClinic.png?v=1617522416211">
+          <div class="rmelement arrow" style="
+                                              top:64%; left:12%; --scaler:1.2;
+                                              -webkit-transform: perspective(400px) rotateX(60deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:170deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          
+          <div class="rmelement text">
+            <p>
+              A very clean dentist's clinic. Like the desirable apartments, dental and doctor's clinics are located on the edge 
+              of the City to make things more convenient for patients outside. An unlicensed clinic meant cheaper prices, but still with
+              the generally same level of quality, so business is good. The large sign reads Bai Chen Dental Clinic.
+            </p>
+          </div>
+        </div>
+      </div>
+<!--       Kwong Ming Street -->
+      <div id="rm25" class="page">
+        <div>
+          <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2Fgirard_kowloon006.jpg?v=1615814829136">
+          <div class="rmelement arrow" style="
+                                              top:55%; left:50%; --scaler:1;
+                                              -webkit-transform: perspective(400px) rotateX(60deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:183deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+<!--           <div class="rmelement arrow back" style="
+                                              top:85%; left:50%; --scaler:1.5;
+                                              -webkit-transform: perspective(400px) rotateX(50deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:110deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div> -->
+          <div class="rmelement arrow back" style="
+                                              top:79%; left:76%; --scaler:1.5;
+                                              -webkit-transform: perspective(400px) rotateX(50deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:-118deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          
+          <div class="rmelement text">
+            <p>
+              Inside this small factory on Kwong Ming Street is employee Kwok Tsan Ming ladeling another batch of fried fishballs, ready for 
+              export. It is said that more than 80% of Kowloon's fishballs come from within the Walled City—a fact that some fishball devotees 
+              perhaps would rather not admit.
+            </p>
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FGirard_KWC_foodfactory_001.jpg?v=1617741018441">
+          </div>
+          <div class="rmelement text">
+            <p>
+              Sweating in the hot and humid weather, a workman carries drinking water or other necessities to his factory. A lot of everyday people 
+              rely on these dark and fetid alleyways to get around, navigating the obstacle course of broken concrete, sodden rubbish, and incessant water 
+              droplets leaking from the makeshift pipes overhead.
+            </p>
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FWorkmen.png?v=1617743354249">
+          </div>
+        </div>
+      </div>
+      
+      <div id="rm26" class="page">
+        <div>
+          <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FHallway05.png?v=1617579936724">
+          <div class="rmelement arrow" style="
+                                              top:82%; left:43%; --scaler:1;
+                                              -webkit-transform: perspective(400px) rotateX(60deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:110deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow back" style="
+                                              top:92%; left:47%; --scaler:1.5;
+                                              -webkit-transform: perspective(400px) rotateX(60deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:-7deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          
+          <div class="rmelement text">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FDark-City-06.jpg?v=1617745094132">
+            <p>
+              Looking up here there is a rare glimpse of daylight. By chance these 12-storey buildings have remained free of later additions that would join them 
+              and block out the sky.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+<!--       Mailboxes -->
+      <div id="rm27" class="page">
+        <div>
+          <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FMailbox02.png?v=1617687122172">
+          <div class="rmelement arrow" style="
+                                              top:81%; left:4%; --scaler:1;
+                                              -webkit-transform: perspective(400px) rotateX(55deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:158deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow" style="
+                                              top:90%; left:12%; --scaler:1.2;
+                                              -webkit-transform: perspective(400px) rotateX(55deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:-24deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          
+          <div class="rmelement text">
+            <p>
+              Like most high-rises, the postboxes are all arranged in organized ranks at the ground level main entrance. 
+              The small posters taped around advertise assistance in moving out. $100 for the contents of a single room, 
+              $200 for a small family and $300 for a large.
+            </p>
+          </div>
+        </div>
+      </div>
+<!--       Fuk Tak -->
+      <div id="rm28" class="page">
+        <div>
+          <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FFukTakTemple2.png?v=1617733885100">
+          <div class="rmelement arrow" style="
+                                              bottom:5%; left:40%; --scaler:1;
+                                              -webkit-transform: perspective(400px) rotateY(27deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:96deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          
+          <div class="rmelement text">
+            <p>
+              Squeezed amongst streetside restaurants and dental offices is Fuk Tak Temple, another temple very popular amongst Chiu Chow residents. 
+              Fuk Tak is a minor deity said to give protection and good fortune to local residents. According to folklore, the temple was 
+              originally erected by a Sun Dynasty emperor who brought a statue of the god to the capital of China.
+              <br><br>
+              Technically, this temple and the establishments around it lie outside the Walled City boundaries (whicch is marked by Lung Shing Road), 
+              but for practical purposes it is considered part of the place.
+            </p>
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FFukTak2.png?v=1617687636648">
+          </div>
+        </div>
+      </div>
+      
+      
+<!--       ruler shop -->
+      <div id="rm29" class="page">
+        <div>
+          <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FRulerShop2.jpg?v=1617496727319">
+          <div class="rmelement arrow" style="
+                                              top:61%; left:24%; --scaler:1;
+                                              -webkit-transform: perspective(400px) rotateX(45deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:-196deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow" style="
+                                              top:90%; left:22%; --scaler:1.2;
+                                              -webkit-transform: perspective(400px) rotateX(45deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:69deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          <div class="rmelement arrow back" style="
+                                              top:89%; left:43%; --scaler:1.5;
+                                              -webkit-transform: perspective(400px) rotateX(50deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:-30deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          
+          <div class="rmelement text">
+            <p>
+              Passing this corriedor off Tai Chang Street is Cheng San's small wooden ruler factory. The amount of rulers he produces changes 
+              monthly, depending on the orders he receives from overseas buyers in Singapore, Malaysia, and Macau. He stays at the shop overnight 
+              just to make sure drug addicts don't come and steal anything, but other than that he says no one in the City has troubled him ever.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+       <div id="rm30" class="page">
+        <div>
+          <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FDeadEnd%3F.png?v=1617579466346">
+          <div class="rmelement arrow back" style="
+                                              top:88%; left:47%; --scaler:1.5;
+                                              -webkit-transform: perspective(400px) rotateX(55deg) scale(var(--scaler));">
+            <svg width="100" height="60" style="--rotate:-15deg;">
+              <path d="M10 10 L50 50 L90 10" fill="transparent" stroke="white" stroke-width="12px"/>
+            </svg>
+          </div>
+          
+          <div class="rmelement text">
+            <img src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2FWalled_City021b.jpg?v=1617751892898">
+            <p>
+              A part-time assistant works the heated press that stamps out plungers from squares of uncured rubber in To Gui Bon's rubber factory. 
+              Even though there are no regulations the workers take extra care in working and keeping the area relatively clean. Throughout the process 
+              the smell of hot rubber is overpowering, especially in the heat of summer. 
+            </p>
+          </div>
+          <div class="rmelement text">
+            <p>
+              Since nothing in the City is properly zoned or planned, it's not uncommon to see the likes of factories pushed up against family apartments. 
+              Here, workers organize and package plastic goods for shipping outside.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      
+   </div>
+
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+<!--     <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js" defer></script> -->
+    
+<!--     <div id="bgScreen">
+      <img class="bgelement cloud" src="https://cdn.glitch.com/a54e754d-c14d-4c60-8d37-c82b57995b82%2Fabout_cloud_02.png?v=1618841367723">
+    </div> -->
+    
+    
+    
+  </body>
+</html>
