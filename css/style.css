@@ -142,10 +142,8 @@ img{
   margin:0;
   padding:0em 1em;
 }
-#about{
-/*   position:fixed;
-  left:10.2em;
-  top:1.7em; */
+#about:hover{
+  cursor: pointer;
 }
 #about p{
   margin:0;
