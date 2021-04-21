@@ -27,6 +27,8 @@ $(document).ready(function(){
     if ($(window).width() < 1024){
       $('#beginScroll').remove();
       
+      $('#logo').hide();
+      $('#nav').hide();
       $('#mobile.modal').modal('show');
       $("#mobile.modal").modal({
         fadeDuration: 1000,
@@ -34,6 +36,8 @@ $(document).ready(function(){
       }); 
       
       $('#mobile.modal').on($.modal.AFTER_CLOSE, function(event, modal){
+        $('#logo').fadeIn(500);
+        $('#nav').fadeIn(500);
         $('#intro.modal').modal('show');
         $("#intro.modal").modal({
           fadeDuration: 1000,
