@@ -553,7 +553,7 @@ img.bgelement{
 #rm4 .text:nth-child(6){
   width:55%;
   min-width:940px;
-  top:67%;
+  bottom:4%;
   left:450px;
   -webkit-transform: perspective(1200px) rotateX(0) rotateY(0deg) rotateZ(0deg) translateZ(-700px);
 }
