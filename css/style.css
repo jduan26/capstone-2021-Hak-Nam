@@ -516,7 +516,7 @@ img.bgelement{
 }
 
 #rm4 > div > img{
-  height:100%;
+  height:100vh;
   min-height:900px;
 }
 #rm4 > div > .text{
