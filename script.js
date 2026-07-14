@@ -135,7 +135,7 @@ $(document).ready(function(){
   // SOUND BUTTON --------------------------------------------------------
   var audio0 = document.createElement('audio'); //oh this just doesn't work in Safari for some reason OKAY
   var audiowater = document.createElement('audio'), audiofly = document.createElement('audio');
-  audio0.setAttribute('src', 'sound/HongKongAmbience_1Market.ogg');
+  audio0.setAttribute('src', 'sound/HongKongAmbience_1Market.mp3');
   audiowater.setAttribute('src', 'sound/filling-sink-1.mp3');
   audiofly.setAttribute('src', 'hsound/airplane-fly-over-01.mp3');
   audiowater.volume = 0.5;
@@ -256,7 +256,7 @@ $(document).ready(function(){
       $('#rm1').fadeIn(800).addClass('open');
       $('#rm1').minimap();
       $.minimap.show();
-      checkSound("sound/HongKongAmbience_1Market.ogg");
+      checkSound("sound/HongKongAmbience_1Market.mp3");
     });
     mapMode = false;
   })
@@ -271,7 +271,7 @@ $(document).ready(function(){
     }
     $('#rm2').minimap();
     $.minimap.show();
-    checkSound("sound/HongKongAmbience_1Market.ogg");
+    checkSound("sound/HongKongAmbience_1Market.mp3");
   })
   $('#rm1 .arrow:nth-child(3)').click(function(){
     $('html, body').animate({
@@ -298,7 +298,7 @@ $(document).ready(function(){
       $('#rm2').fadeIn(800).addClass('open');
       $('#rm2').minimap();
       $.minimap.show();
-      checkSound("sound/HongKongAmbience_1Market.ogg");
+      checkSound("sound/HongKongAmbience_1Market.mp3");
     });
     mapMode = false;
     
@@ -316,7 +316,7 @@ $(document).ready(function(){
       $('#rmrk6 img').fadeIn(800);}
     $('#rm6').minimap();
     $.minimap.show();
-    checkSound("sound/HongKongAmbience_1Market.ogg");
+    checkSound("sound/HongKongAmbience_1Market.mp3");
   })
   $('#rm2 .arrow:nth-child(3)').click(function(){
     $('#rm2').removeClass('open');
@@ -333,7 +333,7 @@ $(document).ready(function(){
     $('#rm2').fadeOut(300);
     $('#rm1').fadeIn(800).addClass('open');
     $('#rm1').minimap(); $.minimap.show();
-    checkSound("sound/HongKongAmbience_1Market.ogg");
+    checkSound("sound/HongKongAmbience_1Market.mp3");
   })
 
   
@@ -372,7 +372,7 @@ $(document).ready(function(){
       rm2visit = true;
       $('#rmrk2 img').fadeIn(800);}
     $('#rm2').minimap(); $.minimap.show();
-    checkSound("sound/HongKongAmbience_1Market.ogg");
+    checkSound("sound/HongKongAmbience_1Market.mp3");
   })
   $('#rm3 .text').mouseenter(function(){
     $('#rm3 .arrow:nth-child(2)').css({"opacity":0});
@@ -394,7 +394,7 @@ $(document).ready(function(){
       //$('#rm1').css({"display":"block"});
       $('#rm4').fadeIn(800).addClass('open');
       $('#rm4').minimap(); $.minimap.show();
-      checkSound("sound/HongKongAmbience_3OutsideQuiet.ogg");
+      checkSound("sound/HongKongAmbience_3OutsideQuiet.mp3");
     });
     mapMode = false;
     
@@ -420,7 +420,7 @@ $(document).ready(function(){
       rm16visit = true;
       $('#rmrk16 img').fadeIn(800);} 
     $('#rm16').minimap(); $.minimap.show();
-    checkSound("sound/HongKongAmbience_1Market.ogg");
+    checkSound("sound/HongKongAmbience_1Market.mp3");
   })
   
   $('#rmrk5').click(function(){
@@ -447,7 +447,7 @@ $(document).ready(function(){
       rm7visit = true;
       $('#rmrk7 img').fadeIn(800);}
     $('#rm7').minimap(); $.minimap.show();
-    checkSound("sound/street-alley-ambience-water.ogg");
+    checkSound("sound/street-alley-ambience-water.mp3");
   })
   $('#rm5 .arrow:nth-child(3)').click(function(){
     $('#rm5').removeClass('open');
@@ -479,7 +479,7 @@ $(document).ready(function(){
       //$('#rm1').css({"display":"block"});
       $('#rm6').fadeIn(800).addClass('open');
       $('#rm6').minimap(); $.minimap.show();
-      checkSound("sound/HongKongAmbience_1Market.ogg");
+      checkSound("sound/HongKongAmbience_1Market.mp3");
     });
     mapMode = false;
     
@@ -496,7 +496,7 @@ $(document).ready(function(){
       rm21visit = true;
       $('#rmrk21 img').fadeIn(800);}
     $('#rm21').minimap(); $.minimap.show();
-    checkSound("sound/HongKongAmbience_1Market.ogg");
+    checkSound("sound/HongKongAmbience_1Market.mp3");
   })
   $('#rm6 .arrow:nth-child(3)').click(function(){
     $('#rm6').removeClass('open');
@@ -507,7 +507,7 @@ $(document).ready(function(){
       rm2visit = true;
       $('#rmrk2 img').fadeIn(800);}
     $('#rm2').minimap(); $.minimap.show();
-    checkSound("sound/HongKongAmbience_1Market.ogg");
+    checkSound("sound/HongKongAmbience_1Market.mp3");
   })
   $('#rm6 .text:nth-child(4)').mouseenter(function(){
     $('#rm6 .arrow:nth-child(2)').css({"opacity":0}); 
@@ -523,7 +523,7 @@ $(document).ready(function(){
       //$('#rm1').css({"display":"block"});
       $('#rm7').fadeIn(800).addClass('open');
       $('#rm7').minimap(); $.minimap.show();
-      checkSound("sound/street-alley-ambience-water.ogg");
+      checkSound("sound/street-alley-ambience-water.mp3");
       //if(sound == true){audiowater.play()};
     });
     mapMode = false;
@@ -592,7 +592,7 @@ $(document).ready(function(){
       rm7visit = true;
       $('#rmrk7 img').fadeIn(800);}
     $('#rm7').minimap(); $.minimap.show();
-    checkSound("sound/street-alley-ambience-water.ogg");
+    checkSound("sound/street-alley-ambience-water.mp3");
   })
   $('#rm8 .arrow:nth-child(2)').click(function(){
     $('#rm8').removeClass('open');
@@ -602,7 +602,7 @@ $(document).ready(function(){
       rm29visit = true;
       $('#rmrk29 img').fadeIn(800);}
     $('#rm29').minimap(); $.minimap.show();
-    checkSound("sound/street-alley-ambience-heater.ogg");
+    checkSound("sound/street-alley-ambience-heater.mp3");
   })
   
   $('#rmrk9').click(function(){
@@ -629,7 +629,7 @@ $(document).ready(function(){
       rm7visit = true;
       $('#rmrk7 img').fadeIn(800);}
     $('#rm7').minimap(); $.minimap.show();
-    checkSound("sound/street-alley-ambience-water.ogg")
+    checkSound("sound/street-alley-ambience-water.mp3")
   })
   $('#rm9 .arrow:nth-child(3)').click(function(){
     $('#rm9').removeClass('open');
@@ -689,7 +689,7 @@ $(document).ready(function(){
       rm4visit = true;
       $('#rmrk4 img').fadeIn(800);}
     $('#rm4').minimap(); $.minimap.show();
-    checkSound("sound/HongKongAmbience_3OutsideQuiet.ogg");
+    checkSound("sound/HongKongAmbience_3OutsideQuiet.mp3");
   })
   $('#rm10 .arrow:nth-child(4)').click(function(){
     $('#rm10').removeClass('open');
@@ -782,7 +782,7 @@ $(document).ready(function(){
       $('#contentPg').fadeIn(500);
       $('#rm13').fadeIn(800).addClass('open');
       $('#rm13').minimap(); $.minimap.show();
-      checkSound("sound/HongKongAmbience_3OutsideQuiet.ogg");
+      checkSound("sound/HongKongAmbience_3OutsideQuiet.mp3");
     });
     mapMode = false;
     
@@ -825,7 +825,7 @@ $(document).ready(function(){
       rm13visit = true;
       $('#rmrk13 img').fadeIn(800);}
     $('#rm13').minimap(); $.minimap.show();
-    checkSound("sound/HongKongAmbience_3OutsideQuiet.ogg");
+    checkSound("sound/HongKongAmbience_3OutsideQuiet.mp3");
   })
   $('#rm14 .arrow:nth-child(3)').click(function(){
     $('#rm14').removeClass('open');
@@ -872,7 +872,7 @@ $(document).ready(function(){
       rm17visit = true;
       $('#rmrk17 img').fadeIn(800);}
     $('#rm17').minimap(); $.minimap.show();
-    checkSound("sound/HongKongAmbience_5OutsideNight.ogg");
+    checkSound("sound/HongKongAmbience_5OutsideNight.mp3");
   })
   $('#rm15 .arrow:nth-child(3)').click(function(){
     $('#rm15').removeClass('open');
@@ -902,7 +902,7 @@ $(document).ready(function(){
       rm16visit = true;
       $('#rmrk16 img').fadeIn(800);}
     $('#rm16').minimap(); $.minimap.show();
-    checkSound("sound/HongKongAmbience_1Market.ogg");
+    checkSound("sound/HongKongAmbience_1Market.mp3");
   })
   
   $('#rmrk16').click(function(){
@@ -913,7 +913,7 @@ $(document).ready(function(){
       //$('#rm1').css({"display":"block"});
       $('#rm16').fadeIn(800).addClass('open');
       $('#rm16').minimap(); $.minimap.show();
-      checkSound("sound/HongKongAmbience_1Market.ogg");
+      checkSound("sound/HongKongAmbience_1Market.mp3");
     });
     mapMode = false;
     
@@ -939,7 +939,7 @@ $(document).ready(function(){
       rm4visit = true;
       $('#rmrk4 img').fadeIn(800);}
     $('#rm4').minimap(); $.minimap.show();
-    checkSound("sound/HongKongAmbience_3OutsideQuiet.ogg")
+    checkSound("sound/HongKongAmbience_3OutsideQuiet.mp3")
   })
   $('#rm16 .arrow:nth-child(4)').click(function(){
     $('#rm16').removeClass('open');
@@ -949,7 +949,7 @@ $(document).ready(function(){
       rm18visit = true;
       $('#rmrk18 img').fadeIn(800);}
     $('#rm18').minimap(); $.minimap.show();
-    checkSound("sound/HongKongAmbience_1Market.ogg");
+    checkSound("sound/HongKongAmbience_1Market.mp3");
   })
   // $('#rm16 .text').mouseenter(function(){
   //   $('#rm16 .arrow:nth-child(3)').css({"opacity":0});
@@ -963,7 +963,7 @@ $(document).ready(function(){
       $('#contentPg').fadeIn(500);
       $('#rm17').fadeIn(800).addClass('open');
       $('#rm17').minimap(); $.minimap.show();
-      checkSound("sound/HongKongAmbience_5OutsideNight.ogg");
+      checkSound("sound/HongKongAmbience_5OutsideNight.mp3");
     });
     mapMode = false;
     
@@ -1039,7 +1039,7 @@ $(document).ready(function(){
       $('#contentPg').fadeIn(500);
       $('#rm18').fadeIn(800).addClass('open');
       $('#rm18').minimap(); $.minimap.show();
-      checkSound("sound/HongKongAmbience_1Market.ogg");
+      checkSound("sound/HongKongAmbience_1Market.mp3");
     });
     mapMode = false;
     
@@ -1055,7 +1055,7 @@ $(document).ready(function(){
       rm16visit = true;
       $('#rmrk16 img').fadeIn(800);}
     $('#rm16').minimap(); $.minimap.show();
-    checkSound("sound/HongKongAmbience_1Market.ogg");
+    checkSound("sound/HongKongAmbience_1Market.mp3");
   })
   $('#rm18 .arrow:nth-child(3)').click(function(){
     $('#rm18').removeClass('open');
@@ -1090,7 +1090,7 @@ $(document).ready(function(){
       rm18visit = true;
       $('#rmrk18 img').fadeIn(800);}
     $('#rm18').minimap(); $.minimap.show();
-    checkSound("sound/HongKongAmbience_1Market.ogg");
+    checkSound("sound/HongKongAmbience_1Market.mp3");
   })
   $('#rm19 .arrow:nth-child(5)').click(function(){
     $('#rm19').removeClass('open');
@@ -1120,7 +1120,7 @@ $(document).ready(function(){
       rm25visit = true;
       $('#rmrk25 img').fadeIn(800);}
     $('#rm25').minimap(); $.minimap.show();
-    checkSound("sound/street-alley-ambience-heater.ogg");
+    checkSound("sound/street-alley-ambience-heater.mp3");
   })
   
   
@@ -1130,7 +1130,7 @@ $(document).ready(function(){
       $('#contentPg').fadeIn(500);
       $('#rm20').fadeIn(800).addClass('open');
       $('#rm20').minimap(); $.minimap.show();
-      checkSound("sound/street-alley-ambience-freezer.ogg");
+      checkSound("sound/street-alley-ambience-freezer.mp3");
     });
     mapMode = false;
     
@@ -1146,7 +1146,7 @@ $(document).ready(function(){
       rm21visit = true;
       $('#rmrk21 img').fadeIn(800);}
     $('#rm21').minimap(); $.minimap.show();
-    checkSound("sound/HongKongAmbience_1Market.ogg");
+    checkSound("sound/HongKongAmbience_1Market.mp3");
   })
   
   $('#rmrk21').click(function(){
@@ -1155,7 +1155,7 @@ $(document).ready(function(){
       $('#contentPg').fadeIn(500);
       $('#rm21').fadeIn(800).addClass('open');
       $('#rm21').minimap(); $.minimap.show();
-      checkSound("sound/HongKongAmbience_1Market.ogg");
+      checkSound("sound/HongKongAmbience_1Market.mp3");
     });
     mapMode = false;
     
@@ -1171,7 +1171,7 @@ $(document).ready(function(){
       rm20visit = true;
       $('#rmrk20 img').fadeIn(800);}
     $('#rm20').minimap(); $.minimap.show();
-    checkSound("sound/street-alley-ambience-freezer.ogg");
+    checkSound("sound/street-alley-ambience-freezer.mp3");
   })
   $('#rm21 .arrow:nth-child(3)').click(function(){
     $('#rm21').removeClass('open');
@@ -1181,7 +1181,7 @@ $(document).ready(function(){
       rm29visit = true;
       $('#rmrk29 img').fadeIn(800);}
     $('#rm29').minimap(); $.minimap.show();
-    checkSound("sound/street-alley-ambience-heater.ogg");
+    checkSound("sound/street-alley-ambience-heater.mp3");
   })
   $('#rm21 .arrow:nth-child(4)').click(function(){
     $('#rm21').removeClass('open');
@@ -1191,7 +1191,7 @@ $(document).ready(function(){
       rm6visit = true;
       $('#rmrk6 img').fadeIn(800);}
     $('#rm6').minimap(); $.minimap.show();
-    checkSound("sound/HongKongAmbience_1Market.ogg");
+    checkSound("sound/HongKongAmbience_1Market.mp3");
   })
   
   $('#rmrk22').click(function(){
@@ -1261,7 +1261,7 @@ $(document).ready(function(){
       rm24visit = true;
       $('#rmrk24 img').fadeIn(800);}
     $('#rm24').minimap(); $.minimap.show();
-    checkSound("sound/street-alley-ambience-freezer.ogg");
+    checkSound("sound/street-alley-ambience-freezer.mp3");
   })
   $('#rm23 .arrow:nth-child(4)').click(function(){
     $('#rm23').removeClass('open');
@@ -1280,7 +1280,7 @@ $(document).ready(function(){
       $('#contentPg').fadeIn(500);
       $('#rm24').fadeIn(800).addClass('open');
       $('#rm24').minimap(); $.minimap.show();
-      checkSound("sound/street-alley-ambience-freezer.ogg");
+      checkSound("sound/street-alley-ambience-freezer.mp3");
     });
     mapMode = false;
     
@@ -1305,7 +1305,7 @@ $(document).ready(function(){
       $('#contentPg').fadeIn(500);
       $('#rm25').fadeIn(800).addClass('open');
       $('#rm25').minimap(); $.minimap.show();
-      checkSound("sound/street-alley-ambience-heater.ogg");
+      checkSound("sound/street-alley-ambience-heater.mp3");
     });
     mapMode = false;
     
@@ -1356,7 +1356,7 @@ $(document).ready(function(){
       rm27visit = true;
       $('#rmrk27 img').fadeIn(800);}
     $('#rm27').minimap(); $.minimap.show();
-    checkSound("sound/HongKongAmbience_2Outside.ogg");
+    checkSound("sound/HongKongAmbience_2Outside.mp3");
   })
   $('#rm26 .arrow:nth-child(3)').click(function(){
     $('#rm26').removeClass('open');
@@ -1366,7 +1366,7 @@ $(document).ready(function(){
       rm25visit = true;
       $('#rmrk25 img').fadeIn(800);}
     $('#rm25').minimap(); $.minimap.show();
-    checkSound("sound/street-alley-ambience-heater.ogg");
+    checkSound("sound/street-alley-ambience-heater.mp3");
   })
   
   $('#rmrk27').click(function(){
@@ -1375,7 +1375,7 @@ $(document).ready(function(){
       $('#contentPg').fadeIn(500);
       $('#rm27').fadeIn(800).addClass('open');
       $('#rm27').minimap(); $.minimap.show();
-      checkSound("sound/HongKongAmbience_2Outside.ogg");
+      checkSound("sound/HongKongAmbience_2Outside.mp3");
     });
     mapMode = false;
     
@@ -1391,7 +1391,7 @@ $(document).ready(function(){
       rm28visit = true;
       $('#rmrk28 img').fadeIn(800);}
     $('#rm28').minimap(); $.minimap.show();
-    checkSound("sound/HongKongAmbience_2Outside.ogg");
+    checkSound("sound/HongKongAmbience_2Outside.mp3");
   })
   $('#rm27 .arrow:nth-child(3)').click(function(){
     $('#rm27').removeClass('open');
@@ -1410,7 +1410,7 @@ $(document).ready(function(){
       $('#contentPg').fadeIn(500);
       $('#rm28').fadeIn(800).addClass('open');
       $('#rm28').minimap(); $.minimap.show();
-      checkSound("sound/HongKongAmbience_2Outside.ogg");
+      checkSound("sound/HongKongAmbience_2Outside.mp3");
     });
     mapMode = false;
     
@@ -1434,7 +1434,7 @@ $(document).ready(function(){
       $('#contentPg').fadeIn(500);
       $('#rm29').fadeIn(800).addClass('open');
       $('#rm29').minimap(); $.minimap.show();
-      checkSound("sound/street-alley-ambience-heater.ogg");
+      checkSound("sound/street-alley-ambience-heater.mp3");
     });
     mapMode = false;
     
@@ -1460,7 +1460,7 @@ $(document).ready(function(){
       rm30visit = true;
       $('#rmrk30 img').fadeIn(800);}
     $('#rm30').minimap(); $.minimap.show();
-    checkSound("sound/street-alley-ambience-heater.ogg");
+    checkSound("sound/street-alley-ambience-heater.mp3");
   })
   $('#rm29 .arrow:nth-child(4)').click(function(){
     $('#rm29').removeClass('open');
@@ -1470,7 +1470,7 @@ $(document).ready(function(){
       rm21visit = true;
       $('#rmrk21 img').fadeIn(800);}
     $('#rm21').minimap(); $.minimap.show();
-    checkSound("sound/HongKongAmbience_1Market.ogg");
+    checkSound("sound/HongKongAmbience_1Market.mp3");
   })
   
    $('#rmrk30').click(function(){
@@ -1479,7 +1479,7 @@ $(document).ready(function(){
       $('#contentPg').fadeIn(500);
       $('#rm30').fadeIn(800).addClass('open');
       $('#rm30').minimap(); $.minimap.show();
-      checkSound("sound/street-alley-ambience-heater.ogg");
+      checkSound("sound/street-alley-ambience-heater.mp3");
     });
     mapMode = false;
     
